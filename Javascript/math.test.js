@@ -18,7 +18,7 @@ test('slope [] should return NaN', () => {
 });
 
 test('slope [1.3] should return NaN', () => {
-    expect(math.slope([.3])).toStrictEqual(NaN);
+    expect(math.slope([1.3])).toStrictEqual(NaN);
 });
 
 test('slope [1.0, 3.5] should return 2.5', () => {
