@@ -15,23 +15,19 @@
  * @param {Array} a items array containing the items.
  */
 function slope(values) {
-    let xAvg = 0;
-    let yAvg = 0;
+    let xAvg = 0, yAvg = 0;
     for (let x = 0; x < values.length; x++) {
         xAvg += x;
         yAvg += values[x];
     }
     xAvg = xAvg / values.length;
     yAvg = yAvg / values.length;
-    let v1 = 0;
-    let v2 = 0;
+    let v1 = 0, v2 = 0;
     for (let x = 0; x < values.length; x++) {
         v1 += (x - xAvg) * (values[x] - yAvg);
         v2 += Math.pow(x - xAvg, 2);
     }
-    let a = v1 / v2;
-    let b = yAvg - a * xAvg;
-    return a;
+    return v1 / v2;
 }
 
 /* END: Math helpers */
